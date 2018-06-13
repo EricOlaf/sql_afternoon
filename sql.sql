@@ -73,4 +73,54 @@ select sum(product_price * quantity) from orders;
 
 select sum(product_price * quantity) from orders
 where personid = 2;
+
+/*TABLE NUMBER 3*/
+
+insert into Artist (Name)
+values('Milky Chance'),
+('Zac Brown'),
+('Isaac Gustaffson');
+
+select * from Artist order by name desc limit 10;
+
+select * from Artist order by name asc limit 5;
+
+select * from Artist where name like 'Black%';
+
+select * from Artist where name like '%Black%';
+
+/* TABLE EMPLOYEE NUMBER 4*/
+
+select FirstName, LastName from Employee where
+city = 'Calgary';
+
+select FirstName, LastName, max(BirthDate) from Employee;
+
+select FirstName, LastName, min(BirthDate) from Employee;
+
+select * from Employee 
+where ReportsTo = 2;
+
+select count(*) from Employee
+where City = 'Lethbridge'; 
+
+/* TABLE INVOICE */
+
+select count(*) from Invoice
+where BillingCountry = "USA";
+
+select max(Total) from Invoice;
+
+select min(Total) from Invoice;
+
+select * from Invoice
+where Total > 5;
+
+select count(*) from Invoice
+where BillingState in('CA', 'TX', 'AZ');
+
+select avg(Total) from Invoice;
+
+select sum(Total) from Invoice;
+
  
