@@ -52,3 +52,25 @@ where favorite_color in ('Orange', 'Green', 'Blue');
 
 select name, favorite_color from person
 where favorite_color in ('Yellow', 'Purple');
+
+/*TABLE NUMBER 2*/
+
+create table orders (
+personid integer primary key autoincrement,
+  product_name varchar(200),
+  product_price integer,
+  quantity integer ); */
+
+insert into orders (product_name, product_price, quantity)
+values('Pec Dec', 209, 20934),
+('Yoga Matt', 66, 1);
+
+select * from orders;
+
+select sum(quantity) from orders;
+
+select sum(product_price * quantity) from orders;
+
+select sum(product_price * quantity) from orders
+where personid = 2;
+ 
